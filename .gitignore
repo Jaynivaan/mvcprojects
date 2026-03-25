@@ -1,0 +1,11 @@
+#ignore databasefiles
+
+CarInsurance/App_Data/*.mdf
+CarInsurance/App_Data/*.Idf
+NewsletterAppMVC/App_Data/*.mdf
+NewsletterAppMVC/App_Data/*.Idf
+
+#ignore build files
+**/bin/
+**/obj/
+.vs/

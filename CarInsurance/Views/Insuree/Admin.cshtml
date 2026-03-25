@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CarInsurance.Models.Insuree>
+
+@{ 
+    ViewBag.Title = "Admin";
+
+}
+
+<h2>ADMINISTRATOR BAY</h2>
+
+<table class="table">
+    <tr>
+        <!--table heading for the first name coloumn-->
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <!--table heading for the last name coloumn-->
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <!--table heading for the EmailAddress coloumn-->
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <!--table heading for the   computed quote coloumn-->
+        <th>
+            @Html.DisplayNameFor(model => model.Quote)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+<tr>
+    <!--Display the insuree's  first name-->
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <!--Display the insuree's  Last name-->
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <!--Display the insuree's  first name-->
+    <td>
+        @Html.DisplayFor(modelItem => item.EmailAddress)
+    </td>
+    <!--Display the insuree's  computed quote value-->
+    <td>
+        @Html.DisplayFor(modelItem => item.Quote)
+    </td>
+</tr>
+
+            }
+</table>
