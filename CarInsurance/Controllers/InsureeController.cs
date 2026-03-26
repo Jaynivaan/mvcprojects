@@ -100,6 +100,10 @@ namespace CarInsurance.Controllers
                 }
 
                 //next condition if porsche add 25,
+                if( insuree.CarMake.ToLower() =="porsche")
+                {
+                    quote += 25;
+                }
                 //ToLower() is used to make sure this comparison works effectievely.
                 if ( insuree.CarMake.ToLower() == "porsche" && insuree.CarModel.ToLower() == "911 carrera")
                 {
@@ -133,8 +137,8 @@ namespace CarInsurance.Controllers
                 //after saving redirect to action toe index view.
                 //return RedirectToAction("Index");
 
-                var insurees = db.Insurees.ToList();
-                db.Insurees.Add(insuree);
+          
+               // db.Insurees.Add(insuree);// code repeated commented out as per the instructor direction. 
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
